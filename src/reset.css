@@ -1,0 +1,91 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: none;
+	list-style: none;
+	outline: none;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: .7rem;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--text);
+	border-radius: 1rem;
+}
+
+html {
+	scrollbar-width: thin;
+	scrollbar-color: var(--text) transparent;
+	scroll-behavior: smooth;
+}
+
+.visible {
+	visibility: visible !important;
+}
+
+.attribution {
+	display: block;
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	background-image: url('https://avatars.githubusercontent.com/u/105203357?v=4');
+	background-size: 100%;
+	height: 4rem;
+	width: 4rem;
+	border-radius: 100%;
+	z-index: 99;
+}
+
+.attribution p {
+	visibility: hidden;
+	position: fixed;
+	bottom: 4.5rem;
+	right: 5rem;
+	width: 13.5rem;
+	padding: .5rem 1rem;
+	border-radius: 1rem 1rem 0;
+	background-color: var(--ele);
+	font-size: .8rem;
+	text-align: left;
+	z-index: 999;
+	box-shadow: 0 0 .3rem var(--shadow);
+	transform: rotateX(90deg);
+	transition: .8s cubic-bezier(.06, .8, .1, 1);
+}
+
+.attribution:hover p {
+	visibility: visible;
+	transform: rotateX(0);
+}
+
+.attribution a {
+	text-decoration: underline;
+	font-weight: 800;
+}
+
+@media screen and (max-width: 800px) {
+	.attribution {
+		position: relative;
+		height: 3.5rem;
+		width: 3.5rem;
+		margin-top: 6rem;
+		left: 1rem;
+	}
+
+	.attribution p {
+		position: relative;
+		visibility: visible;
+		border-radius: 1rem;
+		transform: rotateX(0);
+		left: 4rem;
+		bottom: -.2rem;
+	}
+}
